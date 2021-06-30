@@ -1,0 +1,19 @@
+
+
+        class Solution {
+    public void generateList(TreeNode root,List<Integer>res){
+        if(root==null)
+            return;
+        //Root-left-Right
+        res.add(root.val);
+        generateList(root.left,res);
+        generateList(root.right,res);
+    }
+    public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
+        List<Integer>res = new ArrayList<>();
+        generateList(root1,res);
+        generateList(root2,res);
+        Collections.sort(res);
+        return res;
+    }
+}
