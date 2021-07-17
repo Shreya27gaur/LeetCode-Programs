@@ -1,0 +1,15 @@
+/* Write your PL/SQL query statement below */
+select id,
+sum(decode(month, 'Jan', revenue)) as Jan_revenue,
+sum(decode(month, 'Feb', revenue)) as Feb_revenue,
+sum(decode(month, 'Mar', revenue)) as Mar_revenue,
+sum(decode(month, 'Apr', revenue)) as Apr_revenue,
+sum(decode(month, 'May', revenue)) as May_revenue,
+sum(decode(month, 'Jun', revenue)) as Jun_revenue,
+sum(decode(month, 'Jul', revenue)) as Jul_revenue,
+sum(decode(month, 'Aug', revenue)) as Aug_revenue,
+sum(decode(month, 'Sep', revenue)) as Sep_revenue,
+sum(decode(month, 'Oct', revenue)) as Oct_revenue,
+sum(decode(month, 'Nov', revenue)) as Nov_revenue,
+sum(decode(month, 'Dec', revenue)) as Dec_revenue
+from Department group by id
